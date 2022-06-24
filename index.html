@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-App</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <main class="app">
+            <div class="header"> 
+                 <div id="date"></div>
+            </div>
+            <div class="content">
+            
+            <section class="create-todo">
+            
+            <form id="new-todo-form">
+               
+               <input type="text" name="content" id="content" placeholder=" Add a Task Here">
+               <h4>Pick a Category</h4>
+               <div class="options">
+                <label>
+                    <input type="radio" name="category" id="category1" value="business">
+                    <span class="bubble business"></span>
+                    <div>Business</div>
+                </label>
+        
+                <label>
+                    <input type="radio" name="category" id="category2" value="personal">
+                    <span class="bubble personal"></span>
+                    <div>Personal</div>
+                </label>
+               </div>
+    
+               <input type="submit" value="Add todo">
+            </form>
+            </section>
+            </div>
+        </div>
+            <section class="todo-list">
+       
+        <div class="list" id="todo-list">
+          
+        </div>
+        
+            </section>
+        
+           </main>
+        
+        <script src="js/to-do-app.js"></script>    
+</body>
+</html>
