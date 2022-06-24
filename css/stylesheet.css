@@ -15,7 +15,7 @@
 *{margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'montserrat' sans-serif;
+  
 }
 
 input:not([type="radio"]):not([type="checkbox"]),button{
@@ -32,7 +32,6 @@ body{
   padding: 0;
   margin: 0;
   background-color: rgba(252, 204, 204, 0.1);
-  font-family: 'Titillium Web', sans-serif
 }
 
 .container{
@@ -57,7 +56,7 @@ body{
     left: 10px;
     color: #FFF;
     font-size: 25px;
-    font-family: 'Titillium Web', sans-serif;
+    
 }
 
 
