@@ -28,6 +28,7 @@ button {
   cursor: initial
 }
 
+/* ------------ body ------------ */
 body {
   background: var(--light);
   color: var(--dark);
@@ -36,12 +37,14 @@ body {
   background-color: rgba(252, 204, 204, 0.1);
 }
 
+/* ------------ container ------------ */
 .container {
   padding: 10px;
   width: 380px;
   margin: 0 auto;
 }
 
+/* ------------ header ------------ */
 .header {
   width: 380px;
   height: 200px;
@@ -53,6 +56,7 @@ body {
   position: relative;
 }
 
+/* ------------ date ------------ */
 #date {
   position: absolute;
   bottom: 10px;
@@ -62,6 +66,7 @@ body {
 
 }
 
+/* ------------ section ------------ */
 
 section {
   padding: 10px;
@@ -83,23 +88,7 @@ h4 {
   margin-bottom: 0.5rem;
 }
 
-.greeting .title {
-  display: flex;
-}
-
-.greeting .title input {
-  margin-left: 0.5rem;
-  flex: 1 1 0%;
-  min-width: 0;
-}
-
-.greeting .title,
-.greeting .title input {
-  color: var(--dark);
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
+/* ------------ create-todo ------------ */
 .create-todo input[type="text"] {
   display: block;
   width: 100%;
@@ -136,6 +125,7 @@ input[type="checkbox"] {
   display: none;
 }
 
+/* ------------ bubble-button ------------ */
 .bubble {
   display: flex;
   align-items: center;
@@ -175,6 +165,7 @@ input:checked~.bubble::after {
   opacity: 1;
 }
 
+/* ------------ create labels and input ------------ */
 .create-todo .options label div {
   color: var(--dark);
   font-size: 1.125rem;
@@ -198,6 +189,7 @@ input:checked~.bubble::after {
   opacity: 0.75;
 }
 
+/* ------------ todo-list ------------ */
 .todo-list .list {
   margin: 1rem 0;
 }
@@ -212,6 +204,7 @@ input:checked~.bubble::after {
   margin-bottom: 1rem;
 }
 
+/* ------------ todo-item ------------ */
 .todo-item label {
   display: block;
   margin-right: 1rem;

@@ -1,6 +1,5 @@
 window.addEventListener('load', () => {
     todos = JSON.parse(localStorage.getItem('todos')) || [];
-    const nameInput = document.querySelector('#name');
     const dataElement = document.getElementById("date");
     const newTodoForm = document.querySelector('#new-todo-form');
 
@@ -9,6 +8,7 @@ window.addEventListener('load', () => {
     const today = new Date();
     dataElement.innerHTML = today.toLocaleDateString("en-ZA", options);
 
+    //New to do form
     newTodoForm.addEventListener('submit', e => {
         e.preventDefault();
 
@@ -29,6 +29,7 @@ window.addEventListener('load', () => {
     DisplayTodos();
 })
 
+//Function
 function DisplayTodos() {
     const todoList = document.querySelector('#todo-list');
     todoList.innerHTML = '';
@@ -90,6 +91,8 @@ function DisplayTodos() {
 
             DisplayTodos();
         })
+
+        //Edit Button
         edit.addEventListener('click', e => {
             const input = content.querySelector('input');
             input.removeAttribute('readonly');
@@ -102,6 +105,8 @@ function DisplayTodos() {
                 DisplayTodos();
             })
         })
+
+        //Delete Button
         deleteButton.addEventListener('click', e => {
             todos = todos.filter(t => t != todo);
             localStorage.setItem('todos', JSON.stringify(todos));
