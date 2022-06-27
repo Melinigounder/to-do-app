@@ -11,23 +11,23 @@ window.addEventListener('load', () => {
     //New to do form
     newTodoForm.addEventListener('submit', e => {
         e.preventDefault();
-        
+
         const todo = {
             content: e.target.elements.content.value,
             category: e.target.elements.category.value,
             done: false,
             createdAt: new Date().getTime()
         }
-       
+
         todos.push(todo);
-        
+
         localStorage.setItem('todos', JSON.stringify(todos));
-            
+
 
         e.target.reset();
 
         DisplayTodos();
-   
+
     })
 
     DisplayTodos();
@@ -35,12 +35,12 @@ window.addEventListener('load', () => {
 
 //Function
 function DisplayTodos() {
-   
+
     const todoList = document.querySelector('#todo-list');
     todoList.innerHTML = '';
 
     todos.forEach(todo => {
-      
+
         const todoItem = document.createElement('div');
         todoItem.classList.add('todo-item')
 
@@ -55,7 +55,7 @@ function DisplayTodos() {
         input.type = 'checkbox';
         input.checked = todo.done;
         span.classList.add('bubble');
-    
+
         if (todo.category == 'personal') {
             span.classList.add('personal');
         } else {
@@ -96,7 +96,7 @@ function DisplayTodos() {
             }
 
             DisplayTodos();
-        
+
         })
 
         //Edit Button
@@ -119,7 +119,7 @@ function DisplayTodos() {
             localStorage.setItem('todos', JSON.stringify(todos));
             DisplayTodos();
         })
- 
+
     })
-  
+
 }
