@@ -13,8 +13,7 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  
   box-sizing: border-box;
 }
 
@@ -32,8 +31,8 @@ body {
   background: var(--light);
   color: var(--dark);
   padding: 0;
-  margin: 0;
-  background-color: rgba(252, 204, 204, 0.1);
+  
+  
 }
 
 /* ------------ container ------------ */
