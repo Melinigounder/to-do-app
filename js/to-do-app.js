@@ -98,6 +98,7 @@ function DisplayTodos() {
             DisplayTodos();
 
         })
+        
 
         //Edit Button
         edit.addEventListener('click', e => {
