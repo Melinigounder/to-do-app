@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
     //New to do form
     newTodoForm.addEventListener('submit', e => {
         let messages =[]
-        
+
         if(todos.value ==='' || todos.value == null){
         }
 
@@ -19,8 +19,6 @@ window.addEventListener('load', () => {
         e.preventDefault();
         errorElement.innerText= messages.join(',')
     }
-        //alert('Please add Task')
-        
         const todo = {
             content: e.target.elements.content.value,
             category: e.target.elements.category.value,

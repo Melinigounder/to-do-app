@@ -1,11 +1,10 @@
 :root {
-  --primary: #EA40A4;
+  --primary: #9c4478;
   --bubble: #3A82EE;
-  --personal: var(--primary);
   --light: #EEE;
   --grey: #888;
-  --dark: #313154;
-  --danger: #ff5b57;
+  --dark: #24243e;
+  --danger: #ef1714;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   --bubble-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
 }
