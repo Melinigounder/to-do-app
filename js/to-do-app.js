@@ -2,7 +2,7 @@ window.addEventListener('load', () => {
     todos = JSON.parse(localStorage.getItem('todos')) || [];
     const dataElement = document.getElementById("date");
     const newTodoForm = document.querySelector('#new-todo-form');
-
+    const errorElement = document.getElementById('error')
     //Show todays date
     const options = { weekday: "long", month: "short", day: "numeric" };
     const today = new Date();
@@ -10,8 +10,17 @@ window.addEventListener('load', () => {
 
     //New to do form
     newTodoForm.addEventListener('submit', e => {
-        e.preventDefault();
+        let messages =[]
+        
+        if(todos.value ==='' || todos.value == null){
+        }
 
+        if (messages.length>0){
+        e.preventDefault();
+        errorElement.innerText= messages.join(',')
+    }
+        //alert('Please add Task')
+        
         const todo = {
             content: e.target.elements.content.value,
             category: e.target.elements.category.value,
@@ -21,8 +30,9 @@ window.addEventListener('load', () => {
 
         todos.push(todo);
         
-        localStorage.setItem('todos', JSON.stringify(todos))
+        localStorage.setItem('todos', JSON.stringify(todos));
 
+      
         e.target.reset();
 
         DisplayTodos();
@@ -31,6 +41,7 @@ window.addEventListener('load', () => {
 
     DisplayTodos();
 })
+
 
 //Function
 function DisplayTodos() {
@@ -88,10 +99,10 @@ function DisplayTodos() {
              todoItem.classList.remove('done');
             }
 
-            
             DisplayTodos();
 
         })
+    
     
         //Edit Button
         edit.addEventListener('click', e => {
