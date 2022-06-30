@@ -3,10 +3,35 @@ window.addEventListener('load', () => {
     const dataElement = document.getElementById("date");
     const newTodoForm = document.querySelector('#new-todo-form');
     const errorElement = document.getElementById('error')
+    
     //Show todays date
     const options = { weekday: "long", month: "short", day: "numeric" };
     const today = new Date();
     dataElement.innerHTML = today.toLocaleDateString("en-ZA", options);
+
+    //Clock
+    function displayTime(){
+        var dateTime = new Date();
+        var hrs =dateTime.getHours();
+        var min =  dateTime.getMinutes();
+        var sec = dateTime.getSeconds();
+        var session =document.getElementById('session');
+
+        if(hrs >=12){
+            session.innerHTML ='PM';
+        }else{
+            session.innerHTML ='AM'
+        }
+        if(hrs> 12){
+            hrs =hrs -12;
+        }
+
+        document.getElementById('hours').innerHTML= hrs;
+        document.getElementById('minutes').innerHTML=min;
+        document.getElementById('seconds').innerHTML=sec;
+
+    }
+    setInterval(displayTime,10);
 
     //New to do form
     newTodoForm.addEventListener('submit', e => {
