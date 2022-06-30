@@ -20,9 +20,8 @@ window.addEventListener('load', () => {
         }
 
         todos.push(todo);
-
-        localStorage.setItem('todos', JSON.stringify(todos));
-
+        
+        localStorage.setItem('todos', JSON.stringify(todos))
 
         e.target.reset();
 
@@ -84,11 +83,12 @@ function DisplayTodos() {
             localStorage.setItem('todos', JSON.stringify(todos));
 
             if (todo.done) {
-                todoItem.classList.add('done');
+               todoItem.classList.add('done');
             } else {
-                todoItem.classList.remove('done');
+             todoItem.classList.remove('done');
             }
 
+            
             DisplayTodos();
 
         })
