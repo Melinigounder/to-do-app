@@ -4,13 +4,14 @@
   --light: #EEE;
   --grey: #888;
   --dark: #24243e;
-  --danger: #ef1714;
+  --danger: #bb1f1c;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   --bubble-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
 }
 
-*{
+* {
   box-sizing: border-box;
+
 }
 
 input:not([type="radio"]):not([type="checkbox"]),
@@ -22,12 +23,10 @@ button {
   cursor: initial
 }
 
-
 /* ------------ body ------------ */
 body {
-  background: var(--light);
   color: var(--dark);
-  padding: 0; 
+  padding: 0;
 }
 
 /* ------------ container ------------ */
@@ -58,9 +57,10 @@ body {
   font-size: 25px;
 
 }
+
 /*-------------time---------------*/
 span {
-  color:white;
+  color: white;
 
 }
 
@@ -95,7 +95,7 @@ h4 {
   color: var(--dark);
   background-color: #FFF;
   border-radius: 0.5rem;
- box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
   margin-bottom: 1.5rem;
 }
 
@@ -209,7 +209,7 @@ input:checked~.bubble::after {
 }
 
 .todo-item .actions .edit {
-  margin-right: 0.5rem;
+  margin-right: 0.2rem;
   background-color: var(--primary);
 }
 
@@ -221,26 +221,37 @@ input:checked~.bubble::after {
   text-decoration: line-through;
   color: var(--grey);
 }
-  /* ------------ media queries------------ */
-    /*code for mobile devices smaller than 600px*/
-    body { background-color:white; }
 
-    /* Small devices (portrait tablets and large phones, 600px and up) */
-    @media only screen and (min-width: 600px) {
-       body { background-color: white; }
-    } 
-    
-    /* Medium devices (landscape tablets, 768px and up) */
-    @media only screen and (min-width: 768px) {
-       body { background-color: white; }
-    } 
-    
-    /* Large devices (laptops/desktops, 992px and up) */
-    @media only screen and (min-width: 992px) {
-       body { background-color: white; }
-    } 
-    
-    /* Extra large devices (large laptops and desktops, 1200px and up) */
-    @media only screen and (min-width: 1200px) {
-       body { background-color:white; }
-    }
+/* ------------ media queries------------ */
+/*code for mobile devices smaller than 600px*/
+body {
+  background-color: white;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: plum
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: violet;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    background-color: palevioletred;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color: purple;
+  }
+}

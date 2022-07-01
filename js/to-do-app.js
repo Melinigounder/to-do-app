@@ -3,47 +3,47 @@ window.addEventListener('load', () => {
     const dataElement = document.getElementById("date");
     const newTodoForm = document.querySelector('#new-todo-form');
     const errorElement = document.getElementById('error')
-    
+
     //Show todays date
     const options = { weekday: "long", month: "short", day: "numeric" };
     const today = new Date();
     dataElement.innerHTML = today.toLocaleDateString("en-ZA", options);
 
     //Clock
-    function displayTime(){
+    function displayTime() {
         var dateTime = new Date();
-        var hrs =dateTime.getHours();
-        var min =  dateTime.getMinutes();
+        var hrs = dateTime.getHours();
+        var min = dateTime.getMinutes();
         var sec = dateTime.getSeconds();
-        var session =document.getElementById('session');
+        var session = document.getElementById('session');
 
-        if(hrs >=12){
-            session.innerHTML ='PM';
-        }else{
-            session.innerHTML ='AM'
+        if (hrs >= 12) {
+            session.innerHTML = 'PM';
+        } else {
+            session.innerHTML = 'AM'
         }
-        if(hrs> 12){
-            hrs =hrs -12;
+        if (hrs > 12) {
+            hrs = hrs - 12;
         }
 
-        document.getElementById('hours').innerHTML= hrs;
-        document.getElementById('minutes').innerHTML=min;
-        document.getElementById('seconds').innerHTML=sec;
+        document.getElementById('hours').innerHTML = hrs;
+        document.getElementById('minutes').innerHTML = min;
+        document.getElementById('seconds').innerHTML = sec;
 
     }
-    setInterval(displayTime,10);
+    setInterval(displayTime, 10);
 
     //New to do form
     newTodoForm.addEventListener('submit', e => {
-        let messages =[]
+        let messages = []
 
-        if(todos.value ==='' || todos.value == null){
+        if (todos.value === '' || todos.value == null) {
         }
 
-        if (messages.length>0){
-        e.preventDefault();
-        errorElement.innerText= messages.join(',')
-    }
+        if (messages.length > 0) {
+            e.preventDefault();
+            errorElement.innerText = messages.join(',')
+        }
         const todo = {
             content: e.target.elements.content.value,
             category: e.target.elements.category.value,
@@ -52,10 +52,10 @@ window.addEventListener('load', () => {
         }
 
         todos.push(todo);
-        
+
         localStorage.setItem('todos', JSON.stringify(todos));
 
-      
+
         e.target.reset();
 
         DisplayTodos();
@@ -117,16 +117,16 @@ function DisplayTodos() {
             localStorage.setItem('todos', JSON.stringify(todos));
 
             if (todo.done) {
-               todoItem.classList.add('done');
+                todoItem.classList.add('done');
             } else {
-             todoItem.classList.remove('done');
+                todoItem.classList.remove('done');
             }
 
             DisplayTodos();
 
         })
-    
-    
+
+
         //Edit Button
         edit.addEventListener('click', e => {
             const input = content.querySelector('input');
